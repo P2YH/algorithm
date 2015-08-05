@@ -26,6 +26,21 @@ void InserSort(int nArray[], int n)
 		nArray[j + 1] = key;//插入到顺序的位置
 	}
 }
+//插入排序 for循环版本
+void InserSort2( int nArray[], int n)
+{
+	int key = 0;
+	for (int i = 1; i < n; i++)
+	{
+		key = nArray[i];
+		int j = i -1;
+		for (; j >= 0 && nArray[j] > key; j--)
+		{
+			nArray[j+1] = nArray[j];
+		}
+		nArray[j+1] = key;
+	}
+}
 
 int main()
 {
