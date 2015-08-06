@@ -11,7 +11,7 @@ void printArray(int nArray[], int n)
 }
 
 //插入排序
-void InserSort(int nArray[], int n)
+void InsertSort(int nArray[], int n)
 {
 	int key = 0;
 	for (int i = 1; i < n; i++)
@@ -27,7 +27,7 @@ void InserSort(int nArray[], int n)
 	}
 }
 //插入排序 for循环版本
-void InserSort2( int nArray[], int n)
+void InsertSort3( int nArray[], int n)
 {
 	int key = 0;
 	for (int i = 1; i < n; i++)
@@ -42,12 +42,26 @@ void InserSort2( int nArray[], int n)
 	}
 }
 
+//插入排序3 交换法
+void InsertSort3(int nArray[], int n)
+{
+	for(int i = 1; i < n; i++)
+	{
+		for(int j = i -1; j >=0 && nArray[j + 1] < nArray[j]; j--)
+		{
+			int nTemp = nArray[j];
+			nArray[j] = nArray[j + 1];
+			nArray[j + 1] = nTemp;
+		}
+	}
+}
+
 int main()
 {
 	int nArray[] = {10,3,5,2,1,4};
 	int nSize = sizeof(nArray)/sizeof(nArray[0]);
 	printArray(nArray, nSize);
-	InserSort(nArray, nSize);
+	InsertSort(nArray, nSize);
 	printArray(nArray, nSize);
 	getchar();
 	return 0;
