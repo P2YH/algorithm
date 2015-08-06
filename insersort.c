@@ -47,6 +47,7 @@ void InsertSort3(int nArray[], int n)
 {
 	for(int i = 1; i < n; i++)
 	{
+		//依次比较i之前包括i的相邻的两个元素，如果后一个比前一个元素小，那么交换位置，游标j前移以为
 		for(int j = i -1; j >=0 && nArray[j + 1] < nArray[j]; j--)
 		{
 			int nTemp = nArray[j];
