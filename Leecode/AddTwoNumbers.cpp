@@ -30,8 +30,12 @@ public:
 				l2 = l2->next;
 			}
 			ListNode* Temp = new ListNode(0);
-
+			if (lTag != NULL && lTag->next != NULL)
+			{
+				nSum += lTag->next->val;
+			}
 			Temp->val = nSum%10;
+
 			Temp->next = NULL;
 			if (lTag == NULL)
 			{
@@ -39,11 +43,7 @@ public:
 				HeadNode = lTag;
 			}
 			else
-			{	
-				if (lTag->next != NULL)
-				{
-					Temp->val += lTag->next->val;
-				}
+			{
 				lTag->next = Temp;
 				lTag = lTag->next;
 			}
