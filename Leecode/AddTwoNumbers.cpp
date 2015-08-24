@@ -12,14 +12,9 @@ public:
 	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 		ListNode *lTag = NULL;
 		ListNode *HeadNode = NULL;
-		int nFlag = 0;
-		while ( 1)
+		while (1)
 		{
 			int nSum = 0;
-			if (nFlag)
-			{
-				nSum+=1;
-			}
 			if (l2 == NULL && l1 == NULL)
 			{
 				break;
@@ -36,7 +31,6 @@ public:
 			}
 			ListNode* Temp = new ListNode(0);
 
-
 			Temp->val = nSum%10;
 			Temp->next = NULL;
 			if (lTag == NULL)
@@ -45,17 +39,20 @@ public:
 				HeadNode = lTag;
 			}
 			else
-			{
+			{	
+				if (lTag->next != NULL)
+				{
+					Temp->val += lTag->next->val;
+				}
 				lTag->next = Temp;
 				lTag = lTag->next;
 			}
 			if (nSum > 9)
 			{
-				nFlag = 1;
-			}
-			else
-			{
-				nFlag = 0;
+				ListNode* Temp1 = new ListNode(0);
+				Temp1->val = 1;
+				Temp1->next = NULL;
+				lTag->next = Temp1;
 			}
 		}
 		return HeadNode;
