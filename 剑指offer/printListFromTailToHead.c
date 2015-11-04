@@ -1,4 +1,4 @@
-//库函数翻转vector
+//搴撳嚱鏁扮炕杞瑅ector
 vector<int> printListFromTailToHead(struct ListNode* head) {
 	vector<int> x;
 	ListNode * temp=head;
@@ -9,7 +9,7 @@ vector<int> printListFromTailToHead(struct ListNode* head) {
 	reverse(x.begin(), x.end());
 	return x;
 }
-//头插
+//澶存彃
 vector<int> printListFromTailToHead(struct ListNode* head) {
 	vector<int> x;
 	ListNode * temp=head;
@@ -20,7 +20,7 @@ vector<int> printListFromTailToHead(struct ListNode* head) {
 	return x;
 }
 
-//递归
+//閫掑綊
 vector<int> printListFromTailToHead(struct ListNode* head) {
 	vector<int> x;
 	ListNode * temp=head;
@@ -33,7 +33,7 @@ vector<int> printListFromTailToHead(struct ListNode* head) {
 	return x;
 }
 
-//利用栈数据结构stack
+//鍒╃敤鏍堟暟鎹粨鏋剆tack
 vector<int> printListFromTailToHead(struct ListNode* head) {
 	vector<int> x;
 	stack<int> s;
