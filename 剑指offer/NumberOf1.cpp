@@ -14,8 +14,8 @@ int  NumberOf1(int n) {
 int NumberOf1(int n){
 	int iCount = 0;
 	while(n){
-		if(n & (n - 1)){
-			++iCount;
-		}
+		++iCount;
+		n = n & (n - 1)
 	}
+	return iCount;
 }
